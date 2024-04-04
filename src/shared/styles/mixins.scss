@@ -15,3 +15,9 @@
     @content;
   }
 }
+
+@mixin _860 {
+  @media (max-width: 860px) {
+    @content;
+  }
+}
