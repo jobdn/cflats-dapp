@@ -1,0 +1,11 @@
+@import "../shared/styles/mixins.scss";
+
+.header {
+  @include _1920 {
+    display: none;
+  }
+}
+
+.layout {
+  min-height: 100vh;
+}
