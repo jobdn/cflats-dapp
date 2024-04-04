@@ -8,7 +8,7 @@ import "./globals.scss";
 import classes from "./page.module.scss";
 
 import { config } from "@/shared/config/wagmi";
-import { LeftSidebar } from "@/widgets/LeftSidebar";
+import { TokenActionsList } from "@/widgets/TokenActionsList";
 import { MobileHeader } from "@/widgets/MobileHeader";
 
 const queryClient = new QueryClient();
@@ -20,7 +20,7 @@ export default function Home() {
         <QueryClientProvider client={queryClient}>
           <MobileHeader className={classes.header} />
           <main className={classes.layout}>
-            <LeftSidebar />
+            <TokenActionsList />
           </main>
         </QueryClientProvider>
       </WagmiProvider>
