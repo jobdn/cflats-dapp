@@ -1,0 +1,11 @@
+@import "src/shared/styles/constants.scss";
+@import "src/shared/styles/mixins.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 45px;
+  padding: 28px 28px 0;
+}

@@ -2,9 +2,10 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 export interface AccountState {
   isConnected: boolean;
+  userBalance: string;
 }
 
-const initialState: AccountState = { isConnected: false };
+const initialState: AccountState = { isConnected: false, userBalance: "" };
 
 const accountSlice = createSlice({
   name: "accountSlice",
@@ -14,6 +15,8 @@ const accountSlice = createSlice({
       state.isConnected = action.payload;
     },
   },
+
+  extraReducers: (builder) => {},
 });
 
 export const { actions: accountActions, reducer: accountReducer } =
