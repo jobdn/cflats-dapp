@@ -1,0 +1,70 @@
+@import "../../styles/constants.scss";
+@import "../../styles/mixins.scss";
+
+.btn {
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 600;
+  color: #fff;
+
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  color: inherit;
+  font: inherit;
+
+  line-height: normal;
+
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  -webkit-appearance: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.rounded {
+  padding: 8px 0;
+  border-radius: 27px;
+  box-shadow: 1.62px 3.24px 3.24px 0px rgba(0, 0, 0, 0.15);
+
+  @include _390 {
+    border-radius: 66.667px;
+    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.empty {
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.light-gray {
+  background-color: $light-gray;
+  color: $dark-gray;
+}
+
+.gray {
+  background-color: $gray;
+  color: #fff;
+}
+
+.orange {
+  background: $active-orange;
+  color: #fff;
+}
+
+.blue {
+  background: $active-blue;
+  color: #fff;
+}
