@@ -1,28 +1,24 @@
-"use client";
-
-import { WagmiProvider } from "wagmi";
 import { StoreProvider } from "./config/StoreProvider";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { WagmiProvider } from "./config/WagmiProvider";
 
 import "./globals.scss";
 import classes from "./page.module.scss";
 
-import { config } from "@/shared/config/wagmi";
 import { TokenActionsList } from "@/widgets/TokenActionsList";
 import { MobileHeader } from "@/widgets/MobileHeader";
-
-const queryClient = new QueryClient();
+import { TokensTab } from "@/widgets/TokensTab";
 
 export default function Home() {
   return (
     <StoreProvider>
-      <WagmiProvider config={config}>
-        <QueryClientProvider client={queryClient}>
-          <MobileHeader className={classes.header} />
-          <main className={classes.layout}>
-            <TokenActionsList />
-          </main>
-        </QueryClientProvider>
+      <WagmiProvider>
+        <MobileHeader className={classes.header} />
+
+        {/* id is used to append wallet modal to main */}
+        <main id="main" className={classes.layout}>
+          <TokenActionsList />
+          <TokensTab />
+        </main>
       </WagmiProvider>
     </StoreProvider>
   );

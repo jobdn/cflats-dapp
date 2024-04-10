@@ -1,3 +1,5 @@
+"use client";
+
 import { Provider } from "react-redux";
 import { setupStore } from "../config/setupStore";
 import { PropsWithChildren } from "react";
