@@ -5,6 +5,7 @@ export const TokenActionsList = () => {
   return (
     <div>
       <aside className={classes.aside}>
+        {/* todo: create features-components @feature/ClaimTokens and so on */}
         <ul className={classes.buttonList}>
           <li>
             <Button variant="rounded" color="orange" className={classes.btn}>
@@ -63,7 +64,7 @@ export const TokenActionsList = () => {
           </li>
           <li>
             <Button variant="rounded" color="gray" className={classes.btn}>
-              BUY PROTECTION
+              BUY SHIELD
             </Button>
           </li>
         </ul>
