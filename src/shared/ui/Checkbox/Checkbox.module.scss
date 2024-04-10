@@ -1,0 +1,13 @@
+@import "src/shared/styles/mixins.scss";
+@import "src/shared/styles/constants.scss";
+
+.checkbox {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $light-gray;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
