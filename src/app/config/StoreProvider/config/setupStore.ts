@@ -1,11 +1,20 @@
-import { accountReducer } from "@/entities/Account";
+import { walletReducer } from "@/entities/Wallet";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const setupStore = (initialState: StateSchema) => {
   return configureStore({
     reducer: {
-      account: accountReducer,
+      wallet: walletReducer,
     },
-    preloadedState: initialState,
+    // preloadedState: initialState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        thunk: {
+          extraArgument: {
+            // api,
+            chain: undefined,
+          },
+        },
+      }).concat(),
   });
 };
