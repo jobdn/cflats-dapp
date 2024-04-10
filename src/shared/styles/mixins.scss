@@ -33,3 +33,9 @@
     @content;
   }
 }
+
+@mixin _360 {
+  @media (min-width: 360px) {
+    @content;
+  }
+}
