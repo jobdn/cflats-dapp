@@ -1,0 +1,24 @@
+@import "src/shared/styles/mixins.scss";
+@import "src/shared/styles/constants.scss";
+
+.swiper {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+}
+
+.bullet {
+  background-color: #737272;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 13px;
+
+  &_active {
+    background-color: $light-gray;
+  }
+}
