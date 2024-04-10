@@ -1,7 +1,11 @@
 import { LogoWithKey } from "@/shared/ui/LogoWithKey";
 import classes from "./MobileHeader.module.scss";
-import { Account } from "@/entities/Account";
 import clsx from "clsx";
+import dynamic from "next/dynamic";
+
+const Wallet = dynamic(() => import("../../../entities/Wallet"), {
+  ssr: false,
+});
 
 type MobileHeaderProps = {
   className?: string;
@@ -14,7 +18,7 @@ export const MobileHeader = (props: MobileHeaderProps) => {
     <header className={clsx(classes.header, className)}>
       <LogoWithKey />
 
-      <Account />
+      <Wallet />
     </header>
   );
 };
