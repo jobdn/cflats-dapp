@@ -1,0 +1,89 @@
+@import "src/shared/styles/constants.scss";
+@import "src/shared/styles/mixins.scss";
+
+.tabs {
+  position: relative;
+  max-width: 320px;
+  margin: 0 auto;
+  min-width: 0;
+  margin-bottom: 32px;
+
+  @include _768 {
+    max-width: 712px;
+    margin-bottom: 42px;
+  }
+}
+
+.flexContainer {
+  gap: 35px;
+
+  @include _768 {
+    justify-content: space-between;
+  }
+}
+
+.tabPanel {
+  position: relative;
+}
+
+.indicator {
+  display: none;
+}
+
+.tabRoot {
+  font-family: inherit;
+  padding: 0;
+  min-height: 0;
+  min-width: 0;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #f3f3f3;
+}
+
+.tabsIndicator {
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+  margin: 16px auto 0;
+
+  @include _768 {
+    display: none;
+  }
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.tokens,
+.stakedTokens {
+  border-radius: 25px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: 25px 30px;
+
+  @include _768 {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+.tokens {
+  background: #434141;
+  padding: 25px 30px 39px;
+
+  @include _768 {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
+.stakedTokens {
+  background: #515050;
+  position: relative;
+  top: -25px;
+}
