@@ -1,0 +1,24 @@
+@import "../../../../shared/styles/mixins.scss";
+
+.wallet {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  position: relative;
+
+  @include _768 {
+    display: flex;
+  }
+}
+
+.balance {
+  display: none;
+
+  @include _768 {
+    display: inline;
+    color: #ffb800;
+    font-size: 17px;
+    font-weight: 600;
+  }
+}
