@@ -1,0 +1,17 @@
+@import "src/shared/styles/mixins.scss";
+@import "src/shared/styles/constants.scss";
+
+.title {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  line-height: normal;
+  margin-bottom: 30px;
+  margin: 0;
+  margin-bottom: 29px;
+
+  @include _768 {
+    margin-bottom: 28px;
+    font-size: 17px;
+  }
+}
