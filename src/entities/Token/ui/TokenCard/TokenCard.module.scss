@@ -1,0 +1,129 @@
+@import "src/shared/styles/constants.scss";
+@import "src/shared/styles/mixins.scss";
+
+.card {
+  &_standard {
+    background-color: $standard;
+  }
+  &_diamond {
+    background-color: $diamond;
+
+    .footer {
+      .id,
+      .rarity,
+      strong {
+        color: #ececec;
+      }
+    }
+  }
+  &_silver {
+    background-color: $silver;
+  }
+  &_gold {
+    background-color: $gold;
+  }
+
+  padding: 7.5px 7.5px 10px;
+  border-radius: 15px;
+  width: 150px;
+
+  @include _1920 {
+    width: 200px;
+  }
+}
+
+.hero {
+  height: 135px;
+  width: 135px;
+  position: relative;
+
+  padding: 4px 5px;
+  margin-bottom: 10px;
+
+  .bgGradient {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 11.25px;
+  }
+
+  @include _1920 {
+    height: 180px;
+    width: 180px;
+  }
+
+  img {
+    z-index: 0;
+    border-radius: 11.25px;
+  }
+
+  .gen,
+  .name {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    margin: 0;
+
+    font-weight: 600;
+    letter-spacing: -0.24px;
+    font-size: 12px;
+  }
+
+  .gen {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .name {
+    font-weight: 400;
+  }
+
+  .checkbox {
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 5px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 5px 0 11px;
+
+  .id,
+  .rarity,
+  strong {
+    color: #5d5d5d;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.22px;
+
+    @include _1920 {
+      font-size: 14px;
+      letter-spacing: -0.28px;
+    }
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  .rarity {
+    margin-top: -3px;
+    strong {
+      text-transform: uppercase;
+    }
+  }
+}

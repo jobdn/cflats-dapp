@@ -1,0 +1,67 @@
+@import "src/shared/styles/constants.scss";
+@import "src/shared/styles/mixins.scss";
+
+.skeleton {
+  padding: 7.5px 7.5px 10px;
+  border-radius: 15px;
+  width: 150px;
+  height: 195px;
+  border-radius: 20px;
+  border: 1.5px dashed #b6b6b6;
+
+  @include _1920 {
+    width: 200px;
+    height: 250px;
+  }
+}
+
+.hero {
+  height: 135px;
+  width: 135px;
+  position: relative;
+
+  padding: 4px 5px;
+
+  border-radius: 15px;
+  border: 1.5px dashed #b6b6b6;
+
+  background-image: url("./images/blank_flat.png");
+  background-repeat: no-repeat;
+  background-position: center 17px;
+  background-size: 120px 100px;
+
+  @include _1920 {
+    background-position: center 25px;
+    background-size: 160px 130px;
+    height: 180px;
+    width: 180px;
+  }
+
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: #3d3d3d;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      background-color: #3d3d3d;
+    }
+  }
+}
+
+.footer {
+  color: #b6b6b6;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.34px;
+  padding: 16px;
+
+  text-align: center;
+
+  @include _1920 {
+    padding: 23px;
+  }
+}
