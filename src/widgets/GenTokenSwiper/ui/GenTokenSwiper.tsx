@@ -11,6 +11,7 @@ import { TokenCard, TokenSkeletonCard } from "@/entities/Token";
 type GenTokenSwiperProps = {
   gen: GenNumber;
   title: string;
+  subTitle?: string;
   className?: string;
 };
 
@@ -21,7 +22,7 @@ const getSkeletonTokens = (gen: GenNumber) =>
   }));
 
 export const GenTokenSwiper = (props: GenTokenSwiperProps) => {
-  const { gen, title, className } = props;
+  const { gen, title, className, subTitle } = props;
 
   const genTokens = useAppSelector((state) => tokensSelector(state, gen));
 
@@ -43,7 +44,9 @@ export const GenTokenSwiper = (props: GenTokenSwiperProps) => {
 
   return (
     <section className={className}>
-      <h2 className={classes.title}>{title}</h2>
+      <h2 className={classes.title}>
+        {title} <span> | {subTitle}</span>
+      </h2>
       {swiperContent}
     </section>
   );

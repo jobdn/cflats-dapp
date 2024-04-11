@@ -3,13 +3,16 @@
 import { useState } from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
+import clsx from "clsx";
 
 import classes from "./TokensTab.module.scss";
 import "./MuiOverrides.css";
 
 import { GenTokenSwiper } from "@/widgets/GenTokenSwiper";
 
-type TokensTabProps = {};
+type TokensTabProps = {
+  className?: string;
+};
 type GenTabItem = { genName: string; id: number; disabled?: boolean };
 
 const genList: GenTabItem[] = [
@@ -23,6 +26,7 @@ const genList: GenTabItem[] = [
 ];
 
 export const TokensTab = (props: TokensTabProps) => {
+  const { className } = props;
   const [tabValue, setTabValue] = useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -30,7 +34,7 @@ export const TokensTab = (props: TokensTabProps) => {
   };
 
   return (
-    <>
+    <div className={classes.tabsWrapper}>
       <div className={classes.tabs}>
         <Tabs
           value={tabValue}
@@ -59,11 +63,13 @@ export const TokensTab = (props: TokensTabProps) => {
         <GenTokenSwiper
           gen={0}
           title="Your NFT collection of GEN#0"
+          subTitle="Each NFT can be staked to earn CFLAT token"
           className={classes.tokens}
         />
         <GenTokenSwiper
           gen={0}
-          title="Staked NFT collection of GEN#0"
+          title="Staked NFT of GEN#0"
+          subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
           className={classes.stakedTokens}
         />
       </CustomTabPanel>
@@ -71,15 +77,17 @@ export const TokensTab = (props: TokensTabProps) => {
         <GenTokenSwiper
           gen={1}
           title="Your NFT collection of GEN#1"
+          subTitle="Each NFT can be staked to earn CFLAT token"
           className={classes.tokens}
         />
         <GenTokenSwiper
           gen={1}
-          title="Staked NFT collection of GEN#1"
+          title="Staked NFT of GEN#1"
+          subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
           className={classes.stakedTokens}
         />
       </CustomTabPanel>
-    </>
+    </div>
   );
 };
 
@@ -119,7 +127,7 @@ function CustomTabPanel(props: CustomTabPanelProps) {
       hidden={value !== index}
       id={`token-tabpanel-${index}`}
       aria-labelledby={`token-tab-${index}`}
-      className={className}
+      className={clsx(classes.tabPanel, className)}
       {...otherProps}
     >
       {value === index && <>{children}</>}

@@ -13,8 +13,51 @@
   @include _768 {
     max-width: 712px;
   }
+
+  @include _1920 {
+    display: block;
+  }
 }
 
 .btn {
   width: 160px;
+
+  @include _1920 {
+    width: 230px;
+  }
+}
+
+.btnWrapper {
+  margin-bottom: 14px;
+}
+
+.attackWrapper {
+  @include _1920 {
+    margin-top: 70px;
+    margin-bottom: 22px;
+  }
+}
+
+.attackBtn {
+  @include _1920 {
+    background-color: #ca2e2e;
+  }
+}
+
+.shieldWrapper {
+  @include _1920 {
+    display: none;
+  }
+}
+
+.protectionWrapper {
+  display: none;
+  @include _1920 {
+    display: initial;
+  }
+}
+
+.attackBtn,
+.protectionBtn {
+  font-size: 17px;
 }

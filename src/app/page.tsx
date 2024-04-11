@@ -16,8 +16,14 @@ export default function Home() {
 
         {/* id is used to append wallet modal to main */}
         <main id="main" className={classes.layout}>
-          <TokenActionsList />
-          <TokensTab />
+          <div className={classes.actions}>
+            <TokenActionsList />
+          </div>
+          <div className={classes.tabs}>
+            <TokensTab />
+          </div>
+
+          <div className={classes.stats}></div>
         </main>
       </WagmiProvider>
     </StoreProvider>

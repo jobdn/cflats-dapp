@@ -5,6 +5,10 @@
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
+
+  @include _1920 {
+    font-size: 22px;
+  }
 }
 
 .rounded {

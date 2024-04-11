@@ -23,11 +23,17 @@
     background-color: $gold;
   }
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
   padding: 7.5px 7.5px 10px;
   border-radius: 15px;
   width: 150px;
+  height: 195px;
 
   @include _1920 {
+    height: 260px;
     width: 200px;
   }
 }

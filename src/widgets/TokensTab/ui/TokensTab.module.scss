@@ -1,6 +1,10 @@
 @import "src/shared/styles/constants.scss";
 @import "src/shared/styles/mixins.scss";
 
+.tabsWrapper {
+  height: 100%;
+}
+
 .tabs {
   position: relative;
   max-width: 320px;
@@ -11,6 +15,15 @@
   @include _768 {
     max-width: 712px;
     margin-bottom: 42px;
+  }
+
+  @include _1920 {
+    max-width: 100%;
+    margin-bottom: 52px;
+
+    padding-top: 15px;
+    padding-left: 28px;
+    padding-right: 39px;
   }
 }
 
@@ -23,7 +36,20 @@
 }
 
 .tabPanel {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #434141;
+
+  border-radius: 25px;
+
+  @include _1920 {
+    border-radius: 40px;
+    height: calc(100% - $header_height);
+  }
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 .indicator {
@@ -40,6 +66,10 @@
   font-weight: 600;
 
   color: #f3f3f3;
+
+  @include _1920 {
+    font-size: 22px;
+  }
 }
 
 .tabsIndicator {
@@ -61,29 +91,30 @@
 
 .tokens,
 .stakedTokens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex: 1;
+
   border-radius: 25px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   padding: 25px 30px;
 
-  @include _768 {
+  @include _860 {
     padding-left: 70px;
     padding-right: 70px;
+  }
+
+  @include _1920 {
+    padding: 25px 30px;
+    border-radius: 40px;
   }
 }
 
 .tokens {
   background: #434141;
-  padding: 25px 30px 39px;
-
-  @include _768 {
-    padding-right: 70px;
-    padding-left: 70px;
-  }
 }
 
 .stakedTokens {
   background: #515050;
-  position: relative;
-  top: -25px;
 }

@@ -13,5 +13,21 @@
   @include _768 {
     margin-bottom: 28px;
     font-size: 17px;
+    text-transform: uppercase;
+  }
+
+  @include _1920 {
+    margin-bottom: 36px;
+    padding-top: 7px;
+  }
+
+  span {
+    font-weight: 400;
+    display: none;
+    text-transform: none;
+
+    @include _768 {
+      display: initial;
+    }
   }
 }
