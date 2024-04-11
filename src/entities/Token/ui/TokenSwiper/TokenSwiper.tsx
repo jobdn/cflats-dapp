@@ -1,18 +1,17 @@
 "use client";
 
-import { GenNumber } from "@/shared/types";
+import { GenNumber, Token } from "@/shared/types";
 
-import classes from "./GenTokenSwiper.module.scss";
-import { useAppSelector } from "@/shared/hooks/redux";
+import classes from "./TokenSwiper.module.scss";
 import { Swiper } from "@/shared/Swiper";
-import { tokensSelector } from "@/entities/Wallet";
 import { TokenCard, TokenSkeletonCard } from "@/entities/Token";
 
-type GenTokenSwiperProps = {
+type TokenSwiperProps = {
   gen: GenNumber;
   title: string;
   subTitle?: string;
   className?: string;
+  tokens?: Token[];
 };
 
 const getSkeletonTokens = (gen: GenNumber) =>
@@ -21,16 +20,14 @@ const getSkeletonTokens = (gen: GenNumber) =>
     footerText: `NFT GEN#${gen}`,
   }));
 
-export const GenTokenSwiper = (props: GenTokenSwiperProps) => {
-  const { gen, title, className, subTitle } = props;
+export const TokenSwiper = (props: TokenSwiperProps) => {
+  const { gen, title, className, subTitle, tokens } = props;
 
-  const genTokens = useAppSelector((state) => tokensSelector(state, gen));
-
-  const swiperContent = genTokens?.length ? (
+  const swiperContent = tokens?.length ? (
     <Swiper
       className={classes.swiper}
       onSwipe={() => {}}
-      sliderItems={genTokens}
+      sliderItems={tokens}
       SlideComponent={TokenCard}
     />
   ) : (
