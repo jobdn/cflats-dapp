@@ -106,7 +106,7 @@
   }
 
   @include _1920 {
-    padding: 25px 30px;
+    padding: 25px 53px;
     border-radius: 40px;
   }
 }
@@ -117,4 +117,8 @@
 
 .stakedTokens {
   background: #515050;
+}
+
+.list {
+  padding: 25px 30px;
 }

@@ -23,18 +23,16 @@
     background-color: $gold;
   }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  padding: 7.5px 7.5px 10px;
+  padding: 7.5px 7.5px 0;
   border-radius: 15px;
   width: 150px;
   height: 195px;
 
   @include _1920 {
+    padding: 10px 10px 0;
     height: 260px;
     width: 200px;
+    border-radius: 20px;
   }
 }
 
@@ -43,8 +41,9 @@
   width: 135px;
   position: relative;
 
-  padding: 4px 5px;
-  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 6px;
+  margin-bottom: 9px;
 
   .bgGradient {
     background: linear-gradient(
@@ -59,16 +58,28 @@
     left: 0;
     z-index: 1;
     border-radius: 11.25px;
+
+    @include _1920 {
+      border-radius: 15px;
+    }
   }
 
   @include _1920 {
     height: 180px;
     width: 180px;
+
+    padding-top: 8px;
+    padding-left: 9px;
+    margin-bottom: 15px;
   }
 
   img {
     z-index: 0;
     border-radius: 11.25px;
+
+    @include _1920 {
+      border-radius: 15px;
+    }
   }
 
   .gen,
@@ -81,11 +92,16 @@
     font-weight: 600;
     letter-spacing: -0.24px;
     font-size: 12px;
+
+    @include _1920 {
+      font-size: 17px;
+    }
   }
 
   .gen {
     text-transform: uppercase;
     font-weight: 700;
+    margin-bottom: 2px;
   }
 
   .name {
@@ -95,8 +111,17 @@
   .checkbox {
     position: absolute;
     z-index: 2;
-    top: 9px;
-    right: 5px;
+    top: 6px;
+    right: 6px;
+    width: 15px;
+    height: 15px;
+
+    @include _1920 {
+      width: 19px;
+      height: 19px;
+      top: 9px;
+      right: 9px;
+    }
   }
 }
 
@@ -104,7 +129,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 0 5px 0 11px;
+
+  padding-left: 5px;
+  padding-right: 11px;
+
+  @include _1920 {
+    padding-left: 14px;
+    padding-right: 10px;
+  }
 
   .id,
   .rarity,
@@ -128,8 +160,22 @@
 
   .rarity {
     margin-top: -3px;
+
+    @include _1920 {
+      margin-top: 0;
+    }
+
     strong {
       text-transform: uppercase;
+    }
+  }
+
+  .etherscanLogo {
+    width: 15px;
+    height: 15px;
+    @include _1920 {
+      width: 20px;
+      height: 20px;
     }
   }
 }

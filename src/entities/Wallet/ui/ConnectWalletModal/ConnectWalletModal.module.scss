@@ -1,17 +1,9 @@
 @import "../../../../shared/styles/constants.scss";
 
 .rootModal {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: unset;
-  left: unset;
-
-  border-radius: 32px;
-}
-
-.backdropModal {
-  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modalContent {
@@ -19,4 +11,6 @@
 
   padding: 30px;
   border-radius: 32px;
+
+  width: 390px;
 }

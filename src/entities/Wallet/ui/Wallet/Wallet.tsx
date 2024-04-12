@@ -66,7 +66,6 @@ export const Wallet = (props: WalletProps) => {
       <ConnectWalletModal
         modalIsOpen={walletModal}
         onClose={() => setWalletModal(false)}
-        container={() => document.getElementById("main")}
       />
     </div>
   );

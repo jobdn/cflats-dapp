@@ -2,7 +2,7 @@
 @import "src/shared/styles/mixins.scss";
 
 .skeleton {
-  padding: 7.5px 7.5px 10px;
+  padding: 7.5px 7.5px 0;
   border-radius: 15px;
   width: 150px;
   height: 195px;
@@ -17,7 +17,7 @@
 
 .hero {
   height: 135px;
-  width: 135px;
+
   position: relative;
 
   padding: 4px 5px;
@@ -34,7 +34,6 @@
     background-position: center 25px;
     background-size: 160px 130px;
     height: 180px;
-    width: 180px;
   }
 
   cursor: pointer;
@@ -54,14 +53,15 @@
 
 .footer {
   color: #b6b6b6;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.34px;
-  padding: 16px;
+  padding: 17px;
 
   text-align: center;
 
   @include _1920 {
-    padding: 23px;
+    font-size: 17px;
+    padding: 20px;
   }
 }

@@ -14,8 +14,7 @@ export default function Home() {
       <WagmiProvider>
         <MobileHeader className={classes.header} />
 
-        {/* id is used to append wallet modal to main */}
-        <main id="main" className={classes.layout}>
+        <main className={classes.layout}>
           <div className={classes.actions}>
             <TokenActionsList />
           </div>

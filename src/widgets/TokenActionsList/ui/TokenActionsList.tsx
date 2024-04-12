@@ -1,6 +1,7 @@
 import { Button } from "@/shared/ui/Button";
 import classes from "./TokenActionsList.module.scss";
 import clsx from "clsx";
+import { ToggleTokensView } from "@/features/ToggleTokensView";
 
 interface TokenActionsListProps {
   className?: string;
@@ -38,9 +39,7 @@ export const TokenActionsList = (props: TokenActionsListProps) => {
           </Button>
         </li>
         <li className={classes.btnWrapper}>
-          <Button variant="rounded" color="light-gray" className={classes.btn}>
-            VIEW ALL
-          </Button>
+          <ToggleTokensView className={classes.btn} />
         </li>
         <li className={clsx(classes.btnWrapper, classes.attackWrapper)}>
           <Button
@@ -51,16 +50,12 @@ export const TokenActionsList = (props: TokenActionsListProps) => {
             ATTACK
           </Button>
         </li>
-        <li className={clsx(classes.btnWrapper, classes.shieldWrapper)}>
-          <Button
-            variant="rounded"
-            color="gray"
-            className={clsx(classes.btn, classes.shieldBtn)}
-          >
+        <li className={classes.btnWrapper}>
+          <Button variant="rounded" color="gray" className={clsx(classes.btn)}>
             BUY SHIELD
           </Button>
         </li>
-        <li className={clsx(classes.btnWrapper, classes.protectionWrapper)}>
+        {/* <li className={clsx(classes.btnWrapper, classes.protectionWrapper)}>
           <Button
             variant="rounded"
             color="blue"
@@ -68,7 +63,7 @@ export const TokenActionsList = (props: TokenActionsListProps) => {
           >
             BUY PROTECTION
           </Button>
-        </li>
+        </li> */}
       </ul>
     </aside>
   );

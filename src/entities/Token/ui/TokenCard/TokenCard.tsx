@@ -4,6 +4,7 @@ import { Checkbox } from "@/shared/ui/Checkbox";
 import classes from "./TokenCard.module.scss";
 
 import etherscanLogoImg from "./images/etherscan-logo.svg";
+import grayEtherscanLogoImg from "./images/gray-etherscan-logo.svg";
 import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
@@ -20,7 +21,7 @@ export function TokenCard(props: TokenCardProps) {
     <div className={clsx(classes.card, classes[`card_${rarity}`], className)}>
       <div className={classes.hero}>
         <p className={classes.gen}>
-          <span>Gen #</span>
+          <span>Gen#</span>
           <span>{genNumber}</span>
         </p>
         <p className={classes.name}>{name}</p>
@@ -51,7 +52,13 @@ export function TokenCard(props: TokenCardProps) {
         </div>
 
         <Link href={"/"} target="_blank">
-          <Image src={etherscanLogoImg} alt="Etherscan logo" />
+          <Image
+            src={rarity === "diamond" ? etherscanLogoImg : grayEtherscanLogoImg}
+            width={15}
+            height={15}
+            alt="Etherscan logo"
+            className={classes.etherscanLogo}
+          />
         </Link>
       </div>
     </div>

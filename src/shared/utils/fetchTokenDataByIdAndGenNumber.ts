@@ -11,7 +11,7 @@ export async function fetchTokenDataByIdAndGenNumber(
 ) {
   if (genNumber === 0) {
     return {
-      name: "Cryptoflats NFT Pass GEN#0",
+      name: "Living room",
       description:
         "Collection of 1111 NFT passes for Cryptoflats project benefits",
       id: id,

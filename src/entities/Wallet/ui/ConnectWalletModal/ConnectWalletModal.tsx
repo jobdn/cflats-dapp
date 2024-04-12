@@ -6,16 +6,14 @@ import { config } from "@/shared/config/wagmi";
 import { WalletItem } from "../WalletItem/WalletItem";
 
 import classes from "./ConnectWalletModal.module.scss";
-import type { PortalProps } from "@mui/material";
 
 type ConnectWalletModalProps = {
   modalIsOpen: boolean;
-  container: PortalProps["container"];
   onClose: () => void;
 };
 
 const ConnectWalletModal = (props: ConnectWalletModalProps) => {
-  const { modalIsOpen, container, onClose } = props;
+  const { modalIsOpen, onClose } = props;
 
   const { connectors } = useConnect({ config });
 
@@ -23,8 +21,8 @@ const ConnectWalletModal = (props: ConnectWalletModalProps) => {
     <Modal
       open={modalIsOpen}
       onClose={onClose}
-      classes={{ root: classes.rootModal, backdrop: classes.backdropModal }}
-      container={container}
+      classes={{ root: classes.rootModal }}
+      disablePortal
     >
       <Zoom in={modalIsOpen}>
         <div className={classes.modalContent}>

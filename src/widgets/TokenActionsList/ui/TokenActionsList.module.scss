@@ -34,7 +34,7 @@
 .attackWrapper {
   @include _1920 {
     margin-top: 70px;
-    margin-bottom: 22px;
+    margin-bottom: 13px;
   }
 }
 
@@ -42,22 +42,4 @@
   @include _1920 {
     background-color: #ca2e2e;
   }
-}
-
-.shieldWrapper {
-  @include _1920 {
-    display: none;
-  }
-}
-
-.protectionWrapper {
-  display: none;
-  @include _1920 {
-    display: initial;
-  }
-}
-
-.attackBtn,
-.protectionBtn {
-  font-size: 17px;
 }
