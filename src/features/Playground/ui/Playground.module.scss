@@ -1,0 +1,14 @@
+@import "src/shared/styles/mixins.scss";
+@import "src/shared/styles/constants.scss";
+
+.playground {
+  @include _1920 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+.button {
+  padding: 8px 17px;
+}
