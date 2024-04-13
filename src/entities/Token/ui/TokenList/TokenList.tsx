@@ -5,8 +5,11 @@ import classes from "./TokenList.module.scss";
 import { TokenSkeletonCard } from "../TokenSkeletonCard/TokenSkeletonCard";
 
 interface TokenListProps {
+  title: string;
+  subTitle?: string;
   items?: Token[];
   gen: GenNumber;
+  className?: string;
 }
 
 const getSkeletonTokens = (gen: GenNumber) =>
@@ -16,7 +19,7 @@ const getSkeletonTokens = (gen: GenNumber) =>
   }));
 
 export const TokenList = (props: TokenListProps) => {
-  const { items, gen } = props;
+  const { items, gen, title, subTitle, className } = props;
 
   const listContent = items?.length
     ? items.map((item) => <TokenCard key={item.id} {...item} />)
@@ -24,5 +27,12 @@ export const TokenList = (props: TokenListProps) => {
         <TokenSkeletonCard key={item.id} {...item} />
       ));
 
-  return <ul className={classes.list}>{listContent}</ul>;
+  return (
+    <div className={className}>
+      <h2 className={classes.title}>
+        {title} <span> | {subTitle}</span>
+      </h2>
+      <ul className={classes.list}>{listContent}</ul>
+    </div>
+  );
 };
