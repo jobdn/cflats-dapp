@@ -5,6 +5,7 @@
   font-size: 17px;
   font-style: normal;
   font-weight: 600;
+  color: #fff;
 
   @include _1920 {
     font-size: 22px;
@@ -29,15 +30,16 @@
 
 .gray {
   background-color: $gray;
-  color: #fff;
 }
 
 .orange {
   background: $active-orange;
-  color: #fff;
 }
 
 .blue {
   background: $active-blue;
-  color: #fff;
+}
+
+.purple {
+  background: #7f65b6;
 }
