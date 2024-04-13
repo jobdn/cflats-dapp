@@ -1,0 +1,67 @@
+@import "src/shared/styles/mixins.scss";
+@import "src/shared/styles/constants.scss";
+
+.landsHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 35px;
+  padding-left: 24px;
+
+  @include _768 {
+    padding-left: 0px;
+  }
+
+  @include _1920 {
+    padding-left: 63px;
+  }
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.landsWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  grid-template-rows: repeat(3, 140px);
+  gap: 8px;
+
+  @include _768 {
+    grid-template-columns: repeat(3, 125px);
+    grid-template-rows: repeat(2, 125px);
+  }
+
+  @include _1920 {
+    grid-template-columns: repeat(2, 160px);
+    grid-template-rows: repeat(3, 160px);
+    gap: 15px;
+  }
+}
+
+.land2 {
+  @include _768 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  @include _1920 {
+    grid-row: unset;
+    grid-column: unset;
+  }
+}
+
+.land3 {
+  grid-row: 2 / 4;
+
+  @include _768 {
+    grid-row: 2;
+    grid-column: 2 / 4;
+  }
+
+  @include _1920 {
+    grid-column: unset;
+    grid-row: 2 / 4;
+  }
+}
