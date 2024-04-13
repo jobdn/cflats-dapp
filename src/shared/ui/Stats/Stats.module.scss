@@ -1,0 +1,74 @@
+@import "../../styles/constants.scss";
+
+.statsHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 19px;
+  padding-left: 24px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.statsList {
+  padding-left: 53px;
+}
+
+.statsItem {
+  position: relative;
+  margin-bottom: 6px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -17px;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ffb800;
+  }
+
+  &_standard {
+    &:before {
+      background-color: $standard;
+    }
+  }
+  &_silver {
+    &:before {
+      background-color: $silver;
+    }
+  }
+  &_gold {
+    &:before {
+      background-color: $gold;
+    }
+  }
+  &_diamond {
+    &:before {
+      background-color: $diamond;
+    }
+  }
+}
+
+.name,
+.value {
+  font-size: 15px;
+  font-style: normal;
+  line-height: normal;
+}
+
+.name {
+  letter-spacing: 0.43px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.value {
+  color: #ffb800;
+  font-weight: 700;
+}
