@@ -10,6 +10,7 @@
   padding: 42px 27px 0;
 
   @include _768 {
+    margin-bottom: 41px;
     padding: 32px 65px 0;
   }
 }

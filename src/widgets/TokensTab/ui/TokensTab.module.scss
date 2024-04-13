@@ -7,31 +7,63 @@
 
 .tabs {
   position: relative;
-  max-width: 320px;
+  max-width: 325px;
   margin: 0 auto;
   min-width: 0;
   margin-bottom: 32px;
 
   @include _768 {
-    max-width: 712px;
+    max-width: 759px;
     margin-bottom: 42px;
   }
 
   @include _1920 {
-    max-width: 100%;
-    margin-bottom: 52px;
+    max-width: 1010px;
+    margin: 0 auto;
+    margin-bottom: 59px;
 
-    padding-top: 15px;
-    padding-left: 28px;
-    padding-right: 39px;
+    padding-top: 12px;
   }
 }
 
+.scroller {
+  display: flex;
+}
+
 .flexContainer {
-  gap: 35px;
+  gap: 54px;
+  padding-left: 19px;
 
   @include _768 {
+    gap: 52px;
     justify-content: space-between;
+  }
+
+  @include _1920 {
+    gap: 72px;
+    padding-left: 28px;
+  }
+}
+
+.indicator {
+  display: block;
+
+  top: 50%;
+  transform: translate(-16px, -50%);
+  z-index: -1;
+
+  border-radius: 50px;
+  width: 94px !important;
+  height: 32px !important;
+
+  @include _768 {
+    transform: translate(-18px, -50%);
+  }
+
+  @media (min-width: 1920px) {
+    width: 120px !important;
+    height: 40px !important;
+    transform: translate(-22px, -50%);
   }
 }
 
@@ -44,16 +76,12 @@
 
   @include _1920 {
     border-radius: 40px;
-    height: calc(100% - $header_height);
+    height: calc(100% - $header_height - $layout-row-gap);
   }
 
   &[hidden] {
     display: none;
   }
-}
-
-.indicator {
-  display: none;
 }
 
 .tabRoot {
@@ -76,7 +104,7 @@
   display: flex;
   justify-content: center;
   gap: 9px;
-  margin: 16px auto 0;
+  margin: 24px auto 0;
 
   @include _768 {
     display: none;
@@ -100,13 +128,15 @@
   border-radius: 25px;
   padding: 25px 30px;
 
-  @include _860 {
+  @include _768 {
     padding-left: 70px;
     padding-right: 70px;
   }
 
   @include _1920 {
-    padding: 25px 53px;
+    padding-top: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
     border-radius: 40px;
   }
 }

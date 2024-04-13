@@ -5,17 +5,19 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
-  row-gap: 12px;
+  row-gap: 13px;
   margin: 0 auto;
   max-width: 344px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 
   @include _768 {
     max-width: 712px;
+    row-gap: 16px;
   }
 
   @include _1920 {
     display: block;
+    margin-bottom: 46px;
   }
 }
 
@@ -28,7 +30,9 @@
 }
 
 .btnWrapper {
-  margin-bottom: 14px;
+  @include _1920 {
+    margin-bottom: 14px;
+  }
 }
 
 .attackWrapper {

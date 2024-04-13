@@ -8,7 +8,12 @@ import clsx from "clsx";
 import classes from "./TokensTab.module.scss";
 import "./MuiOverrides.css";
 
-import { GenTokenSwiper } from "@/widgets/GenTokenSwiper";
+import { TokenSwiper } from "@/entities/Token/index";
+import { useAppSelector } from "@/shared/hooks/redux";
+import { selectView } from "@/features/ToggleTokensView";
+import { TokenList } from "@/entities/Token";
+import { tokensSelector } from "@/entities/Wallet";
+import { GenNumber } from "@/shared/types";
 
 type TokensTabProps = {
   className?: string;
@@ -27,17 +32,20 @@ const genList: GenTabItem[] = [
 
 export const TokensTab = (props: TokensTabProps) => {
   const { className } = props;
-  const [tabValue, setTabValue] = useState(0);
+  const [genTab, setGenTab] = useState<GenNumber>(0);
+  const view = useAppSelector(selectView);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setTabValue(newValue);
+    setGenTab(newValue as GenNumber);
   };
+
+  const genTokens = useAppSelector((state) => tokensSelector(state, genTab));
 
   return (
     <div className={classes.tabsWrapper}>
       <div className={classes.tabs}>
         <Tabs
-          value={tabValue}
+          value={genTab}
           onChange={handleChange}
           variant="scrollable"
           scrollButtons={false}
@@ -45,6 +53,7 @@ export const TokensTab = (props: TokensTabProps) => {
           classes={{
             indicator: classes.indicator,
             flexContainer: classes.flexContainer,
+            scroller: classes.scroller,
           }}
         >
           {genList.map((gen) => (
@@ -57,35 +66,64 @@ export const TokensTab = (props: TokensTabProps) => {
             />
           ))}
         </Tabs>
-        <CustomTabsIndicator tabValue={tabValue} tabsAmount={genList.length} />
+        <CustomTabsIndicator tabValue={genTab} tabsAmount={genList.length} />
       </div>
-      <CustomTabPanel value={tabValue} index={0}>
-        <GenTokenSwiper
-          gen={0}
-          title="Your NFT collection of GEN#0"
-          subTitle="Each NFT can be staked to earn CFLAT token"
-          className={classes.tokens}
-        />
-        <GenTokenSwiper
-          gen={0}
-          title="Staked NFT of GEN#0"
-          subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
-          className={classes.stakedTokens}
-        />
+      <CustomTabPanel value={genTab} index={0}>
+        {view === "swiper" && (
+          <>
+            <TokenSwiper
+              gen={0}
+              title="Your NFT collection of GEN#0"
+              subTitle="Each NFT can be staked to earn CFLAT token"
+              className={classes.tokens}
+              tokens={genTokens}
+            />
+            <TokenSwiper
+              gen={0}
+              title="Staked NFT of GEN#0"
+              subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
+              className={classes.stakedTokens}
+              tokens={genTokens}
+            />
+          </>
+        )}
+
+        {view === "all" && (
+          <TokenList
+            title={"Your NFT collection of GEN#0 / Staked"}
+            subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
+            items={genTokens}
+            gen={0}
+            className={classes.list}
+          />
+        )}
       </CustomTabPanel>
-      <CustomTabPanel value={tabValue} index={1}>
-        <GenTokenSwiper
-          gen={1}
-          title="Your NFT collection of GEN#1"
-          subTitle="Each NFT can be staked to earn CFLAT token"
-          className={classes.tokens}
-        />
-        <GenTokenSwiper
-          gen={1}
-          title="Staked NFT of GEN#1"
-          subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
-          className={classes.stakedTokens}
-        />
+      <CustomTabPanel value={genTab} index={1}>
+        {view === "swiper" && (
+          <>
+            <TokenSwiper
+              gen={1}
+              title="Your NFT collection of GEN#1"
+              subTitle="Each NFT can be staked to earn CFLAT token"
+              className={classes.tokens}
+            />
+            <TokenSwiper
+              gen={1}
+              title="Staked NFT of GEN#1"
+              subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
+              className={classes.stakedTokens}
+            />
+          </>
+        )}
+
+        {view === "all" && (
+          <TokenList
+            title="Your NFT collection of GEN#1 / Staked"
+            subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
+            items={genTokens}
+            gen={0}
+          />
+        )}
       </CustomTabPanel>
     </div>
   );

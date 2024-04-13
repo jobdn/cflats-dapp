@@ -1,16 +1,6 @@
 /* Use !important is bad!!! */
 .Mui-selected {
   color: #f1f1f1 !important;
-  border-radius: 50px;
-  background-color: #0f6eb2;
-  font-weight: 700 !important;
-  width: 94px;
-  height: 32px;
-
-  @media (min-width: 1920px) {
-    width: 120px;
-    height: 40px;
-  }
 }
 
 .Mui-disabled {
