@@ -1,0 +1,85 @@
+@import "src/shared/styles/mixins.scss";
+@import "src/shared/styles/constants.scss";
+
+.land {
+  border-radius: 25px;
+  border: 3px solid;
+
+  padding-top: 10px;
+  padding-bottom: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &_locked {
+    border: 2px solid #b6b6b6;
+    background: #5d5d5d;
+  }
+
+  &_unlocked {
+    border: 3px solid #fff;
+
+    img {
+      transform: rotate(-135deg);
+    }
+  }
+
+  &_gen1 {
+    background: #c25959;
+  }
+
+  &_gen2 {
+    background: #21aa81;
+  }
+  &_gen3 {
+    background: #da9309;
+  }
+  &_gen4 {
+    background: #0f6eb2;
+  }
+  &_gen5 {
+    background: #6242a6;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+
+  @include _768 {
+    font-size: 11px;
+  }
+
+  @include _1920 {
+    font-size: 14px;
+  }
+}
+
+.desc {
+  p {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    @include _768 {
+      font-size: 11px;
+    }
+
+    @include _1920 {
+      font-size: 14px;
+    }
+  }
+
+  .name {
+    text-transform: uppercase;
+  }
+}
