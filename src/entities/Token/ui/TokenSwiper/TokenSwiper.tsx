@@ -3,7 +3,7 @@
 import { GenNumber, Token } from "@/shared/types";
 
 import classes from "./TokenSwiper.module.scss";
-import { Swiper } from "@/shared/Swiper";
+import { Swiper } from "@/shared/ui/Swiper";
 import { TokenCard, TokenSkeletonCard } from "@/entities/Token";
 
 type TokenSwiperProps = {
