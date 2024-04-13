@@ -19,7 +19,12 @@ const initialState: WalletState = {
 const walletSlice = createSlice({
   name: "walletSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    resetAllTokens(state) {
+      // Важный вопрос: где хранить gen
+      state.tokens = {};
+    },
+  },
 
   extraReducers: (builder) => {
     builder.addCase(fetchTokensByGen.pending, (state, action) => {});

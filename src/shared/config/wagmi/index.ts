@@ -16,6 +16,6 @@ export const config = createConfig({
   ],
   transports: {
     [mainnet.id]: http(),
-    [polygonMumbai.id]: http(),
+    [polygonMumbai.id]: http("https://polygon-mumbai-bor-rpc.publicnode.com"),
   },
 });

@@ -6,10 +6,6 @@
   gap: 30px;
 
   position: relative;
-
-  @include _768 {
-    display: flex;
-  }
 }
 
 .balance {

@@ -14,6 +14,7 @@ import { useAppDispatch } from "@/shared/hooks/redux";
 import { fetchTokensByGen } from "../../model/thunks/fetchTokensByGen";
 
 import { config } from "@/shared/config/wagmi";
+import clsx from "clsx";
 
 const ConnectWalletModal = dynamic(
   () => import("../ConnectWalletModal/ConnectWalletModal"),
@@ -22,13 +23,14 @@ const ConnectWalletModal = dynamic(
 
 type WalletProps = {
   className?: string;
+  balancePosition?: "left" | "right";
 };
 
 export const Wallet = (props: WalletProps) => {
+  const { balancePosition = "left", className } = props;
   const [walletModal, setWalletModal] = useState(false);
-  const { balance } = useWalletBalance();
-  const currentChainId = useChainId();
 
+  const currentChainId = useChainId();
   const { isConnected } = useAccount();
 
   const accountSrc = isConnected ? defaultAvatarSrc : notConnectedSrc;
@@ -50,10 +52,8 @@ export const Wallet = (props: WalletProps) => {
   };
 
   return (
-    <div className={classes.wallet}>
-      {isConnected && (
-        <span className={classes.balance}>TOKENS: {balance} CFLAT</span>
-      )}
+    <div className={clsx(classes.wallet, className)}>
+      {balancePosition === "left" && <Balance isConnected={isConnected} />}
       <button onClick={handleConnect}>
         <Image
           src={accountSrc}
@@ -63,10 +63,24 @@ export const Wallet = (props: WalletProps) => {
         />
       </button>
 
+      {balancePosition === "right" && <Balance isConnected={isConnected} />}
+
       <ConnectWalletModal
         modalIsOpen={walletModal}
         onClose={() => setWalletModal(false)}
       />
     </div>
+  );
+};
+
+const Balance = (props: { isConnected: boolean }) => {
+  const { isConnected } = props;
+  const { balance } = useWalletBalance();
+
+  return (
+    <span className={classes.balance}>
+      TOKENS:
+      {isConnected ? ` ${balance} CFLAT` : " N/A"}
+    </span>
   );
 };
