@@ -42,6 +42,14 @@
   &_gen5 {
     background: #6242a6;
   }
+
+  @include _768 {
+    border-radius: 22px;
+  }
+
+  @include _1920 {
+    border-radius: 29px;
+  }
 }
 
 .title {

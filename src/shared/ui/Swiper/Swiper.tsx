@@ -10,7 +10,6 @@ import "swiper/css/pagination";
 import "swiper/css/grid";
 
 import classes from "./Swiper.module.scss";
-import "./SwiperOverrides.css";
 
 interface SwiperProps<T> {
   onSwipe: (...args: any[]) => void;

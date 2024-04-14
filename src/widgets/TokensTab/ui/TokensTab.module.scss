@@ -126,17 +126,14 @@
   flex: 1;
 
   border-radius: 25px;
-  padding: 25px 30px;
+  padding: 24px 34px;
 
   @include _768 {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding: 27px 70px;
   }
 
   @include _1920 {
-    padding-top: 18px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
     border-radius: 40px;
   }
 }

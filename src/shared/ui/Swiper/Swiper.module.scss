@@ -2,12 +2,23 @@
 @import "src/shared/styles/constants.scss";
 
 .swiper {
+  --swiper-pagination-bottom: 0px;
   width: 100%;
+  padding-bottom: 40px;
+
+  @include _768 {
+    height: 240px;
+  }
+
+  @include _1920 {
+    height: 298px;
+  }
 }
 
 .slide {
   display: flex;
   justify-content: center;
+  // height: auto;
 }
 
 .bullet {
