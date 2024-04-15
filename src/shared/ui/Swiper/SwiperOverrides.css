@@ -1,0 +1,6 @@
+.swiper-pagination {
+  line-height: 0;
+  /* height as bullet height */
+  height: 6px;
+  bottom: 0;
+}

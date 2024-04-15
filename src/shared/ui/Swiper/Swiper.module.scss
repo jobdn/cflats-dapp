@@ -4,21 +4,23 @@
 .swiper {
   --swiper-pagination-bottom: 0px;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 
   @include _768 {
-    height: 240px;
+    height: 228px;
+    padding-bottom: 0px;
   }
 
   @include _1920 {
-    height: 298px;
+    min-height: 292px;
+
+    height: 71%;
   }
 }
 
 .slide {
   display: flex;
   justify-content: center;
-  // height: auto;
 }
 
 .bullet {

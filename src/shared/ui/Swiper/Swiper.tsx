@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import "swiper/css/pagination";
 import "swiper/css/grid";
+import "./SwiperOverrides.css";
 
 import classes from "./Swiper.module.scss";
 
