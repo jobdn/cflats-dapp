@@ -42,8 +42,23 @@
   }
 }
 
+.attackBtn,
+.shieldBtn {
+  color: #ababab;
+
+  @include _1920 {
+    color: #fff;
+  }
+}
+
 .attackBtn {
   @include _1920 {
     background-color: #ca2e2e;
+  }
+}
+
+.shieldBtn {
+  @include _1920 {
+    background-color: #0f6eb2;
   }
 }

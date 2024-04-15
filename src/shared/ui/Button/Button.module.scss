@@ -10,6 +10,10 @@
   @include _1920 {
     font-size: 22px;
   }
+
+  &:disabled {
+    color: #ababab;
+  }
 }
 
 .rounded {

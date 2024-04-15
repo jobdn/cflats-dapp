@@ -42,14 +42,20 @@ export const TokenActionsList = (props: TokenActionsListProps) => {
       <li className={clsx(classes.btnWrapper, classes.attackWrapper)}>
         <Button
           variant="rounded"
-          color="gray"
+          color="light-gray"
+          // disabled
           className={clsx(classes.btn, classes.attackBtn)}
         >
           ATTACK
         </Button>
       </li>
       <li className={classes.btnWrapper}>
-        <Button variant="rounded" color="gray" className={clsx(classes.btn)}>
+        <Button
+          // disabled
+          variant="rounded"
+          color="light-gray"
+          className={clsx(classes.btn, classes.shieldBtn)}
+        >
           BUY SHIELD
         </Button>
       </li>
