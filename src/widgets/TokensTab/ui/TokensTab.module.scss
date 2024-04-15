@@ -20,7 +20,7 @@
   @include _1920 {
     max-width: 1010px;
     margin: 0 auto;
-    margin-bottom: 59px;
+    margin-bottom: 48px;
 
     padding-top: 12px;
   }
@@ -128,7 +128,7 @@
   border-radius: 25px;
   padding: 24px 34px;
 
-  @include _768 {
+  @include _860 {
     padding: 27px 70px;
   }
 
