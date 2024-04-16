@@ -14,9 +14,9 @@ $content_height: 800px;
 .layout {
   position: relative;
   min-width: 100vw;
-  min-height: 100vh;
 
   @include _1920 {
+    height: 100vh;
     display: grid;
     // grid-template-columns: minmax($aside_width, 1fr) minmax($middle_width, 1fr) minmax(
     //     $aside_width,
