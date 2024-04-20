@@ -1,6 +1,5 @@
+import { ViewType } from "@/entities/Token";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-
-type ViewType = "swiper" | "all";
 
 export interface TokensViewState {
   view: ViewType;

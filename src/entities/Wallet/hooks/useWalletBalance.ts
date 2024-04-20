@@ -5,9 +5,10 @@ import { useLayoutEffect, useState } from "react";
 import { useAccount, useChainId } from "wagmi";
 import { getBalance } from "@wagmi/core";
 import { config } from "@/shared/config/wagmi";
+import { formatUnits } from "viem";
 
 export const useWalletBalance = () => {
-  const [balance, setBalance] = useState(0);
+  const [balance, setBalance] = useState("0");
 
   const { address } = useAccount();
   const currentChainId = useChainId();
@@ -21,7 +22,7 @@ export const useWalletBalance = () => {
           address: address ?? zeroAddress,
           unit: 8,
         });
-        setBalance(Number(result.value));
+        setBalance(formatUnits(result.value, result.decimals));
       } catch (e) {
         console.log(e);
       }

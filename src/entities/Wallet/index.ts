@@ -3,6 +3,8 @@ export {
   type WalletState,
   walletActions,
   walletReducer,
-  tokensSelector,
+  selectTokens,
+  selectStakedTokens,
+  selectGen,
 } from "./model/walletSlice";
 export default Wallet;

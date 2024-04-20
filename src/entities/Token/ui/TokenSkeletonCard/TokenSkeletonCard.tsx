@@ -2,16 +2,15 @@
 
 import classes from "./TokenSkeletonCard.module.scss";
 
-import blankFlatImg from "./images/blank_flat.png";
-import Image from "next/image";
 import clsx from "clsx";
+import { memo } from "react";
 
 export interface TokenSkeletonCardProps {
   footerText: string;
   className?: string;
 }
 
-export function TokenSkeletonCard(props: TokenSkeletonCardProps) {
+export const TokenSkeletonCard = memo((props: TokenSkeletonCardProps) => {
   const { className, footerText } = props;
 
   return (
@@ -21,4 +20,6 @@ export function TokenSkeletonCard(props: TokenSkeletonCardProps) {
       <div className={classes.footer}>{footerText}</div>
     </div>
   );
-}
+});
+
+TokenSkeletonCard.displayName = "TokenSkeletonCard";

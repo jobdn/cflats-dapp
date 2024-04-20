@@ -1,4 +1,4 @@
-export const LogoWithKey = async () => {
+export const LogoWithKey = () => {
   return (
     <svg
       width="231"

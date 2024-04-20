@@ -6,6 +6,7 @@ import { GenNumber } from "@/shared/types";
 import key from "./images/key.png";
 
 import classes from "./Land.module.scss";
+import { memo } from "react";
 
 type LandProps = {
   type: "unlocked" | "locked";
@@ -15,7 +16,7 @@ type LandProps = {
   className?: string;
 };
 
-export const Land = (props: LandProps) => {
+export const Land = memo((props: LandProps) => {
   const { gen, name, type, className, title } = props;
 
   return (
@@ -36,4 +37,6 @@ export const Land = (props: LandProps) => {
       </div>
     </div>
   );
-};
+});
+
+Land.displayName = "Land";
