@@ -28,14 +28,10 @@ export const TokenCollection = (props: TokenCollectionProps) => {
       </h2>
 
       {view === "all" && (
-        <TokenList gen={gen} items={tokens} className={collectionClassName} />
+        <TokenList items={tokens} className={collectionClassName} />
       )}
       {view === "swiper" && (
-        <TokenSwiper
-          tokens={tokens}
-          gen={gen}
-          className={collectionClassName}
-        />
+        <TokenSwiper tokens={tokens} className={collectionClassName} />
       )}
     </div>
   );

@@ -20,7 +20,8 @@
 
   @include _1920 {
     gap: 72px;
-    padding-left: 28px;
+    width: 100%;
+    padding: 0 28px;
   }
 }
 

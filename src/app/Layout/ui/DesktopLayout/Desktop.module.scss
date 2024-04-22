@@ -16,14 +16,14 @@ $header-left-p: 40px;
 .header {
   display: grid;
   grid-template-columns:
-    $aside_width - $header-left-p minmax($middle_width, 1fr)
+    $aside_width minmax($middle_width, 1fr)
     $aside_width;
   column-gap: 36px;
   align-items: center;
 
   height: $header_height;
 
-  padding: 0 $header-left-p 0 44px;
+  // padding: 0 $header-left-p 0 44px;
 }
 
 .content {
@@ -95,11 +95,14 @@ $header-left-p: 40px;
 
 .right {
   grid-area: right;
+
+  display: flex;
+  justify-content: space-between;
   padding: 22px;
 }
 
 .userStats {
-  margin-bottom: 36px;
+  margin-bottom: 16px;
 }
 
 .tabsHeader {
