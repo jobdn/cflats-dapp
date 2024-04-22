@@ -38,15 +38,15 @@
     grid-template-columns: repeat(2, 160px);
     grid-template-rows: repeat(3, 160px);
     gap: 15px;
-  }
 
-  @media screen and (max-height: 990px) {
-    gap: 8px;
-  }
+    @media screen and (max-height: 990px) {
+      gap: 8px;
+    }
 
-  @media screen and (max-height: 970px) {
-    grid-template-columns: repeat(2, 150px);
-    grid-template-rows: repeat(3, 150px);
+    @media screen and (max-height: 970px) {
+      grid-template-columns: repeat(2, 150px);
+      grid-template-rows: repeat(3, 150px);
+    }
   }
 }
 
