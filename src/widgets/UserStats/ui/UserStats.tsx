@@ -20,12 +20,11 @@ export const UserStats = (props: UserStatsProps) => {
   const { className } = props;
 
   return (
-    <div className={className}>
-      <Stats
-        statsIcon={userIcon}
-        statsTitle="User statistics:"
-        stats={userStats}
-      />
-    </div>
+    <Stats
+      statsIcon={userIcon}
+      statsTitle="User statistics:"
+      stats={userStats}
+      className={className}
+    />
   );
 };

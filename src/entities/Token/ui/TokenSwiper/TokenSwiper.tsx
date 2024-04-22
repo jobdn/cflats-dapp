@@ -6,19 +6,18 @@ import { Swiper } from "@/shared/ui/Swiper";
 import { TokenCard, TokenSkeletonCard } from "@/entities/Token";
 
 type TokenSwiperProps = {
-  gen: GenNumber;
   className?: string;
   tokens?: Token[];
 };
 
-const getSkeletonTokens = (gen: GenNumber) =>
+const getSkeletonTokens = () =>
   [...Array(8)].map((_, key) => ({
     id: key,
-    footerText: `NFT GEN#${gen}`,
+    footerText: `STAKED NFT`,
   }));
 
 export const TokenSwiper = (props: TokenSwiperProps) => {
-  const { gen, className, tokens } = props;
+  const { className, tokens } = props;
 
   const swiperContent = tokens?.length ? (
     <Swiper
@@ -29,7 +28,7 @@ export const TokenSwiper = (props: TokenSwiperProps) => {
   ) : (
     <Swiper
       onSwipe={() => {}}
-      sliderItems={getSkeletonTokens(gen)}
+      sliderItems={getSkeletonTokens()}
       SlideComponent={TokenSkeletonCard}
     />
   );

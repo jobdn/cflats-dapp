@@ -12,9 +12,8 @@
   }
 
   @include _1920 {
-    min-height: 292px;
-
-    height: 71%;
+    height: auto;
+    padding-bottom: calc(2.5vh + 3px);
   }
 }
 

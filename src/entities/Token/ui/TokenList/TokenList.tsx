@@ -7,22 +7,21 @@ import clsx from "clsx";
 
 interface TokenListProps {
   items?: Token[];
-  gen: GenNumber;
   className?: string;
 }
 
-const getSkeletonTokens = (gen: GenNumber) =>
+const getSkeletonTokens = () =>
   [...Array(100)].map((_, key) => ({
     id: key,
-    footerText: `NFT GEN#${gen}`,
+    footerText: `STAKED NFT`,
   }));
 
 export const TokenList = (props: TokenListProps) => {
-  const { items, gen, className } = props;
+  const { items, className } = props;
 
   const listContent = items?.length
     ? items.map((item) => <TokenCard key={item.id} {...item} />)
-    : getSkeletonTokens(gen).map((item) => (
+    : getSkeletonTokens().map((item) => (
         <TokenSkeletonCard key={item.id} {...item} />
       ));
 

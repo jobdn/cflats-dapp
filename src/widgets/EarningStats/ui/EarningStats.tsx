@@ -15,12 +15,11 @@ export const EarningStats = (props: EarningStatsProps) => {
   const { className } = props;
 
   return (
-    <div className={className}>
-      <Stats
-        statsIcon={earchIcon}
-        statsTitle="Earning statistics:"
-        stats={earnStats}
-      />
-    </div>
+    <Stats
+      statsIcon={earchIcon}
+      statsTitle="Earning statistics:"
+      stats={earnStats}
+      className={className}
+    />
   );
 };

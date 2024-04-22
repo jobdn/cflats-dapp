@@ -43,7 +43,7 @@ export const TabsHeader = (props: TabsHeaderProps) => {
             disableRipple
             classes={{ root: classes.tabRoot }}
             label={gen.genName}
-            // disabled={gen.disabled}
+            disabled={gen.disabled}
           />
         ))}
       </Tabs>
