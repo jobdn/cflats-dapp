@@ -1,0 +1,57 @@
+@import "src/shared/styles/constants.scss";
+@import "src/shared/styles/mixins.scss";
+
+.tokens,
+.stakedTokens {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex: 1;
+
+  border-radius: 25px;
+  padding: 24px 34px;
+
+  @include _860 {
+    padding: 27px 70px;
+  }
+
+  @include _1920 {
+    padding: 0 50px;
+    border-radius: 40px;
+  }
+}
+
+.tokens {
+  background: #434141;
+}
+
+.stakedTokens {
+  background: #515050;
+}
+
+.list {
+  position: relative;
+
+  padding: 27px;
+  height: 100%;
+
+  overflow-y: auto;
+
+  &::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 112px;
+    width: 100%;
+
+    // background: linear-gradient(180deg, #fff 0%, #000 100%);
+    // filter: blur(30px);
+  }
+}
+
+.listContent {
+  display: flex;
+  justify-content: center;
+}

@@ -19,6 +19,10 @@
     display: block;
     margin-bottom: 46px;
   }
+
+  @media screen and (max-height: 990px) {
+    margin-bottom: 36px;
+  }
 }
 
 .btn {
@@ -39,6 +43,10 @@
   @include _1920 {
     margin-top: 70px;
     margin-bottom: 13px;
+  }
+
+  @media screen and (max-height: 990px) {
+    margin-top: 50px;
   }
 }
 

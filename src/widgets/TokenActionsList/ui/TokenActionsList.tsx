@@ -43,7 +43,6 @@ export const TokenActionsList = (props: TokenActionsListProps) => {
         <Button
           variant="rounded"
           color="light-gray"
-          // disabled
           className={clsx(classes.btn, classes.attackBtn)}
         >
           ATTACK

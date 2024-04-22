@@ -1,8 +1,9 @@
 "use client";
 
 import { useAccount, useChainId, useClient } from "wagmi";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
+import { RiWallet3Line } from "react-icons/ri";
 
 import notConnectedSrc from "../../images/not_connected.svg";
 import defaultAvatarSrc from "../../images/account_default.svg";
@@ -33,7 +34,20 @@ export const Wallet = (props: WalletProps) => {
   const currentChainId = useChainId();
   const { isConnected } = useAccount();
 
-  const accountSrc = isConnected ? defaultAvatarSrc : notConnectedSrc;
+  const icon = useMemo(
+    () =>
+      isConnected ? (
+        <Image
+          src={defaultAvatarSrc}
+          width={43}
+          height={43}
+          alt="Not connected image"
+        />
+      ) : (
+        <RiWallet3Line title="Connect Wallet" size={45} color="#fff" />
+      ),
+    [isConnected]
+  );
 
   const dispatch = useAppDispatch();
   const client = useClient({
@@ -54,14 +68,7 @@ export const Wallet = (props: WalletProps) => {
   return (
     <div className={clsx(classes.wallet, className)}>
       {balancePosition === "left" && <Balance isConnected={isConnected} />}
-      <button onClick={handleConnect}>
-        <Image
-          src={accountSrc}
-          width={40}
-          height={40}
-          alt="Not connected image"
-        />
-      </button>
+      <button onClick={handleConnect}>{icon}</button>
 
       {balancePosition === "right" && <Balance isConnected={isConnected} />}
 

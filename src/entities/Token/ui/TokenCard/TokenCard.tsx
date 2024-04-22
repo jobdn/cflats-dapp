@@ -9,12 +9,13 @@ import Image from "next/image";
 import clsx from "clsx";
 import Link from "next/link";
 import type { Token } from "@/shared/types";
+import { memo } from "react";
 
 export interface TokenCardProps extends Token {
   className?: string;
 }
 
-export function TokenCard(props: TokenCardProps) {
+export const TokenCard = memo((props: TokenCardProps) => {
   const { rarity = "silver", imgSrc, genNumber, name, id, className } = props;
 
   return (
@@ -63,4 +64,6 @@ export function TokenCard(props: TokenCardProps) {
       </div>
     </div>
   );
-}
+});
+
+TokenCard.displayName = "TokenCard";

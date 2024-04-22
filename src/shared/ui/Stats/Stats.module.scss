@@ -6,6 +6,9 @@
   gap: 10px;
   margin-bottom: 19px;
   padding-left: 24px;
+
+  // to prevent text jumping while collapse layout
+  white-space: nowrap;
 }
 
 .title {
@@ -18,6 +21,9 @@
 }
 
 .statsItem {
+  // to prevent text jumping while collapse layout
+  white-space: nowrap;
+
   position: relative;
   margin-bottom: 6px;
 

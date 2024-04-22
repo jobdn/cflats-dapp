@@ -1,12 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import clsx from "clsx";
 import { useAccount, useDisconnect } from "wagmi";
+import { IoExitOutline } from "react-icons/io5";
 
 import { Button } from "@/shared/ui/Button";
-
-import exitIcon from "../images/exit.svg";
 
 import classes from "./Playground.module.scss";
 import { walletActions } from "@/entities/Wallet";
@@ -44,7 +42,7 @@ export const Playground = (props: PlaygroundProps) => {
         onClick={handleDisconnect}
         title="Exit from wallet"
       >
-        <Image src={exitIcon} alt="Exit icon" />
+        <IoExitOutline size={45} />
       </Button>
     </div>
   );
