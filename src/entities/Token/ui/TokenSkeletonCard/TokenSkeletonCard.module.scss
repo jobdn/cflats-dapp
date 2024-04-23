@@ -9,7 +9,7 @@
   border-radius: 20px;
   border: 1.5px dashed #b6b6b6;
 
-  @include _1920 {
+  @include _1900 {
     width: 200px;
     height: 250px;
   }
@@ -30,7 +30,7 @@
   background-position: center 17px;
   background-size: 120px 100px;
 
-  @include _1920 {
+  @include _1900 {
     background-position: center 25px;
     background-size: 160px 130px;
     height: 180px;
@@ -60,7 +60,7 @@
 
   text-align: center;
 
-  @include _1920 {
+  @include _1900 {
     font-size: 17px;
     padding: 20px;
   }

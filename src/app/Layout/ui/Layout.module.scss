@@ -2,13 +2,13 @@
 @import "src/shared/styles/constants.scss";
 
 .mobile {
-  @include _1920 {
+  @include _1900 {
     display: none;
   }
 }
 .desktop {
   display: none;
-  @include _1920 {
+  @include _1900 {
     display: block;
   }
 }

@@ -85,7 +85,7 @@ const Balance = (props: { isConnected: boolean }) => {
   const { balance } = useWalletBalance();
 
   return (
-    <span className={classes.balance}>
+    <span className={classes.balance} title={`${balance} CFLAT`}>
       TOKENS:
       {isConnected ? ` ${balance} CFLAT` : " N/A"}
     </span>

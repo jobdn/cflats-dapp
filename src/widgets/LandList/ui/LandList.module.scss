@@ -12,7 +12,7 @@
     padding-left: 0px;
   }
 
-  @include _1920 {
+  @include _1900 {
     padding-left: 73px;
   }
 }
@@ -34,7 +34,7 @@
     grid-template-rows: repeat(2, 125px);
   }
 
-  @include _1920 {
+  @include _1900 {
     grid-template-columns: repeat(2, 150px);
     grid-template-rows: repeat(3, 150px);
     gap: 12px;
@@ -47,7 +47,7 @@
     grid-column: 1;
   }
 
-  @include _1920 {
+  @include _1900 {
     grid-row: unset;
     grid-column: unset;
   }
@@ -61,7 +61,7 @@
     grid-column: 2 / 4;
   }
 
-  @include _1920 {
+  @include _1900 {
     grid-column: unset;
     grid-row: 2 / 4;
   }
