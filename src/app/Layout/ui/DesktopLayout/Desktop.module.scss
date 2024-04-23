@@ -20,10 +20,9 @@ $header-left-p: 40px;
     $aside_width;
   column-gap: 36px;
   align-items: center;
+  justify-items: center;
 
   height: $header_height;
-
-  // padding: 0 $header-left-p 0 44px;
 }
 
 .content {

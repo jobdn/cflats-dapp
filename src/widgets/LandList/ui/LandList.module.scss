@@ -35,8 +35,8 @@
   }
 
   @include _1920 {
-    grid-template-columns: repeat(2, 160px);
-    grid-template-rows: repeat(3, 160px);
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 150px);
     gap: 22px;
   }
 }
