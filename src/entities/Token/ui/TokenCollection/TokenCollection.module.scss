@@ -3,20 +3,13 @@
 
 .title {
   text-align: center;
-  font-size: 15px;
+  font-size: 14px;
   line-height: normal;
-  margin-bottom: 30px;
   margin: 0;
   margin-bottom: 29px;
 
   @include _768 {
-    margin-bottom: 28px;
-    font-size: 17px;
     text-transform: uppercase;
-  }
-
-  @include _1920 {
-    margin-bottom: 36px;
   }
 
   span {
