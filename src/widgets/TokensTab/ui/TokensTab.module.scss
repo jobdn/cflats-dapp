@@ -23,7 +23,7 @@
 
   border-radius: 25px;
 
-  @include _1920 {
+  @include _1900 {
     border-radius: 40px;
     height: calc(100% - $header_height - $layout-row-gap);
   }
@@ -48,7 +48,7 @@
     padding: 27px 70px;
   }
 
-  @include _1920 {
+  @include _1900 {
     padding: 0 50px;
     border-radius: 40px;
   }

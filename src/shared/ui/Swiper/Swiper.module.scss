@@ -11,9 +11,10 @@
     padding-bottom: 0px;
   }
 
-  @include _1920 {
+  @include _1900 {
     height: auto;
     padding-bottom: calc(2.5vh + 3px);
+    margin-bottom: calc(2.5vh + 3px);
   }
 }
 

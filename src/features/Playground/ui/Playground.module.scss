@@ -2,7 +2,7 @@
 @import "src/shared/styles/constants.scss";
 
 .playground {
-  @include _1920 {
+  @include _1900 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
