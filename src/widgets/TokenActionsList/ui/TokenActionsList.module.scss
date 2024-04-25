@@ -15,7 +15,7 @@
     row-gap: 16px;
   }
 
-  @include _1900 {
+  @include _1800 {
     display: block;
     margin-bottom: 46px;
 
@@ -28,19 +28,19 @@
 .btn {
   width: 160px;
 
-  @include _1900 {
+  @include _1800 {
     width: 230px;
   }
 }
 
 .btnWrapper {
-  @include _1900 {
+  @include _1800 {
     margin-bottom: 14px;
   }
 }
 
 .attackWrapper {
-  @include _1900 {
+  @include _1800 {
     margin-top: 70px;
     margin-bottom: 13px;
 
@@ -54,19 +54,19 @@
 .shieldBtn {
   color: #ababab;
 
-  // @include _1900 {
+  // @include _1800 {
   //   color: #fff;
   // }
 }
 
 .attackBtn {
-  // @include _1900 {
+  // @include _1800 {
   //   background-color: #ca2e2e;
   // }
 }
 
 .shieldBtn {
-  // @include _1900 {
+  // @include _1800 {
   //   background-color: #0f6eb2;
   // }
 }

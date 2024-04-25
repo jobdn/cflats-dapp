@@ -28,7 +28,7 @@
   width: 150px;
   height: 195px;
 
-  @include _1900 {
+  @include _1800 {
     padding: 10px 10px 0;
     height: 260px;
     width: 200px;
@@ -59,12 +59,12 @@
     z-index: 1;
     border-radius: 11.25px;
 
-    @include _1900 {
+    @include _1800 {
       border-radius: 15px;
     }
   }
 
-  @include _1900 {
+  @include _1800 {
     height: 180px;
     width: 180px;
 
@@ -77,7 +77,7 @@
     z-index: 0;
     border-radius: 11.25px;
 
-    @include _1900 {
+    @include _1800 {
       border-radius: 15px;
     }
   }
@@ -93,7 +93,7 @@
     letter-spacing: -0.24px;
     font-size: 12px;
 
-    @include _1900 {
+    @include _1800 {
       font-size: 17px;
     }
   }
@@ -116,7 +116,7 @@
     width: 15px;
     height: 15px;
 
-    @include _1900 {
+    @include _1800 {
       width: 19px;
       height: 19px;
       top: 9px;
@@ -133,7 +133,7 @@
   padding-left: 5px;
   padding-right: 11px;
 
-  @include _1900 {
+  @include _1800 {
     padding-left: 14px;
     padding-right: 10px;
   }
@@ -148,7 +148,7 @@
     line-height: normal;
     letter-spacing: -0.22px;
 
-    @include _1900 {
+    @include _1800 {
       font-size: 14px;
       letter-spacing: -0.28px;
     }
@@ -161,7 +161,7 @@
   .rarity {
     margin-top: -3px;
 
-    @include _1900 {
+    @include _1800 {
       margin-top: 0;
     }
 
@@ -173,7 +173,7 @@
   .etherscanLogo {
     width: 15px;
     height: 15px;
-    @include _1900 {
+    @include _1800 {
       width: 20px;
       height: 20px;
     }

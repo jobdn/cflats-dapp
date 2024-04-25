@@ -48,7 +48,7 @@ export const Swiper = <T extends { id: number }>(props: SwiperProps<T>) => {
           slidesPerView: 6,
         },
 
-        1900: {
+        1800: {
           slidesPerView: 4,
         },
 
