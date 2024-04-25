@@ -18,7 +18,7 @@
     justify-content: space-between;
   }
 
-  @include _1900 {
+  @include _1800 {
     gap: 72px;
     width: 100%;
     padding: 0 28px;
@@ -40,7 +40,7 @@
     transform: translate(-18px, -50%);
   }
 
-  @include _1900 {
+  @include _1800 {
     width: 120px !important;
     height: 40px !important;
     transform: translate(-22px, -50%);
@@ -58,7 +58,7 @@
 
   color: #f3f3f3;
 
-  @include _1900 {
+  @include _1800 {
     font-size: 22px;
   }
 }
