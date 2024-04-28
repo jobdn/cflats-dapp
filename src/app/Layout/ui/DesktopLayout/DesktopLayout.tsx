@@ -33,7 +33,7 @@ export const DesktopLayout = (props: DesktopLayoutProps) => {
   return (
     <div className={clsx(classes.layout, className)}>
       <header className={classes.header}>
-        <Wallet balancePosition="right" />
+        <Wallet balancePosition="right" className={classes.wallet} />
         <TabsHeader className={classes.tabsHeader} />
         <Playground className={classes.playground} />
       </header>

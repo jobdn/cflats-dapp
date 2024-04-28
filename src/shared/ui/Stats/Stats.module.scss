@@ -1,4 +1,6 @@
 @import "../../styles/constants.scss";
+@import "../../../shared/styles/constants.scss";
+@import "../../../shared/styles//mixins.scss";
 
 .statsHeader {
   display: flex;
@@ -9,11 +11,26 @@
 
   // to prevent text jumping while collapse layout
   white-space: nowrap;
+
+  @include _2560 {
+    margin-bottom: 20px;
+  }
+}
+
+.statsIcon {
+  @include _2560 {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .title {
   font-size: 17px;
   font-weight: 700;
+
+  @include _2560 {
+    font-size: 22px;
+  }
 }
 
 .statsList {
@@ -66,6 +83,10 @@
   font-size: 14px;
   font-style: normal;
   line-height: normal;
+
+  @include _2560 {
+    font-size: 22px;
+  }
 }
 
 .name {

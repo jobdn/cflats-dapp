@@ -42,9 +42,15 @@ export const Wallet = (props: WalletProps) => {
           width={43}
           height={43}
           alt="Not connected image"
+          className={classes.icon}
         />
       ) : (
-        <RiWallet3Line title="Connect Wallet" size={45} color="#fff" />
+        <RiWallet3Line
+          title="Connect Wallet"
+          size={45}
+          color="#fff"
+          className={classes.icon}
+        />
       ),
     [isConnected]
   );

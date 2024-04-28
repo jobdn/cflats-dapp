@@ -23,6 +23,9 @@
       margin-bottom: 36px;
     }
   }
+  @include _2560 {
+    margin-bottom: 60px;
+  }
 }
 
 .btn {
@@ -31,11 +34,20 @@
   @include _1800 {
     width: 230px;
   }
+  @include _2560 {
+    width: 300px;
+    padding: 10px;
+    font-size: 30px;
+  }
 }
 
 .btnWrapper {
   @include _1800 {
     margin-bottom: 14px;
+  }
+
+  @include _2560 {
+    margin-bottom: 19px;
   }
 }
 
@@ -47,6 +59,11 @@
     @media screen and (max-height: 990px) {
       margin-top: 50px;
     }
+  }
+
+  @include _2560 {
+    margin-top: 90px;
+    margin-bottom: 23px;
   }
 }
 

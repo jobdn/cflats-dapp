@@ -15,11 +15,27 @@
   @include _1800 {
     padding-left: 73px;
   }
+
+  @include _2560 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+.landsIcon {
+  @include _2560 {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .title {
   font-size: 17px;
   font-weight: 700;
+
+  @include _2560 {
+    font-size: 22px;
+  }
 }
 
 .landsWrapper {
@@ -38,6 +54,12 @@
     grid-template-columns: repeat(2, 150px);
     grid-template-rows: repeat(3, 150px);
     gap: 12px;
+  }
+
+  @include _2560 {
+    grid-template-columns: repeat(2, 210px);
+    grid-template-rows: repeat(3, 210px);
+    gap: 20px;
   }
 }
 

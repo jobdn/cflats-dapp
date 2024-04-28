@@ -67,6 +67,10 @@
   @include _1800 {
     font-size: 14px;
   }
+
+  @include _2560 {
+    font-size: 18px;
+  }
 }
 
 .desc {
@@ -84,6 +88,10 @@
 
     @include _1800 {
       font-size: 14px;
+    }
+
+    @include _2560 {
+      font-size: 18px;
     }
   }
 
