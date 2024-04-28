@@ -42,7 +42,7 @@ export const Playground = (props: PlaygroundProps) => {
         onClick={handleDisconnect}
         title="Exit from wallet"
       >
-        <IoExitOutline size={45} />
+        <IoExitOutline size={45} className={classes.icon} />
       </Button>
     </div>
   );

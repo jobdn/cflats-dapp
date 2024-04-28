@@ -17,4 +17,15 @@
     font-size: 17px;
     font-weight: 600;
   }
+
+  @include _2560 {
+    font-size: 24px;
+  }
+}
+
+.icon {
+  @include _2560 {
+    width: 70px;
+    height: 70px;
+  }
 }

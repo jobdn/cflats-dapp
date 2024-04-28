@@ -23,7 +23,7 @@ export const Stats = (props: StatsProps) => {
   return (
     <div className={className}>
       <div className={classes.statsHeader}>
-        <Image src={statsIcon} alt="Stats icon" />
+        <Image src={statsIcon} alt="Stats icon" className={classes.statsIcon} />
         <h2 className={classes.title}>{statsTitle}</h2>
       </div>
 

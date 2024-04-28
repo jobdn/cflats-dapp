@@ -21,4 +21,9 @@
       display: initial;
     }
   }
+
+  @include _2560 {
+    font-size: 22px;
+    margin-bottom: 47px;
+  }
 }

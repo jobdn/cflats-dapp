@@ -16,7 +16,7 @@ export const LandList = (props: LandListProps) => {
   return (
     <div className={clsx(classes.lands, className)}>
       <div className={classes.landsHeader}>
-        <Image src={landsIcon} alt="lands icon" />
+        <Image src={landsIcon} alt="lands icon" className={classes.landsIcon} />
         <h2 className={classes.title}>Available lands: </h2>
       </div>
 

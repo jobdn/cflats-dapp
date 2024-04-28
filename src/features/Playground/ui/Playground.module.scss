@@ -11,4 +11,15 @@
 
 .button {
   padding: 8px 40px;
+
+  @include _2560 {
+    font-size: 29px;
+  }
+}
+
+.icon {
+  @include _2560 {
+    width: 70px;
+    height: 70px;
+  }
 }

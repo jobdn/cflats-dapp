@@ -1,28 +1,46 @@
 @import "src/shared/styles/mixins.scss";
 @import "src/shared/styles/constants.scss";
 
-$aside_width: 384px;
+$min-aside_width: 357px;
+$max-aside_width: 384px;
 $middle_width: 950px;
-$content_height: 800px;
+
+$aside_width_2k: 512px;
+$middle_width_2k: 1300px;
 
 $layout-p: 36px;
+$layout-p-2k: 50px;
 $header-left-p: 40px;
 
 .layout {
   padding: 0 $layout-p $layout-p;
   overflow: hidden;
+
+  @include _2560 {
+    padding: 0 $layout-p_2k $layout-p_2k;
+  }
 }
 
 .header {
   display: grid;
   grid-template-columns:
-    $aside_width minmax($middle_width, 1fr)
-    $aside_width;
+    minmax($min-aside_width, $max-aside_width) minmax($middle_width, 1fr)
+    minmax($min-aside_width, $max-aside_width);
   column-gap: 36px;
   align-items: center;
   justify-items: center;
 
   height: $header_height;
+
+  @include _2560 {
+    max-width: 2560px;
+    margin: 0 auto;
+
+    grid-template-columns: $aside_width_2k minmax($middle_width_2k, 1fr) $aside_width_2k;
+    height: $header_height_2k;
+    column-gap: 50px;
+    justify-items: normal;
+  }
 }
 
 .content {
@@ -31,9 +49,21 @@ $header-left-p: 40px;
   height: calc(100vh - $header_height - $layout-p);
 
   display: grid;
-  grid-template-columns: $aside_width minmax($middle_width, 1fr) $aside_width;
+  grid-template-columns:
+    minmax($min-aside_width, $max-aside_width) minmax($middle_width, 1fr)
+    minmax($min-aside_width, $max-aside_width);
   grid-template-rows: minmax(0, 1fr);
   column-gap: 36px;
+
+  @include _2560 {
+    grid-template-columns: $aside_width_2k minmax($middle_width_2k, 1fr) $aside_width_2k;
+    max-width: 2560px;
+    margin: 0 auto;
+    column-gap: 50px;
+
+    width: calc(100vw - (2 * $layout-p-2k));
+    height: calc(100vh - $header_height_2k - $layout-p-2k);
+  }
 
   grid-template-areas: "left middle right";
 
@@ -78,6 +108,10 @@ $header-left-p: 40px;
 .left {
   grid-area: left;
   padding-top: 61px;
+
+  @include _2560 {
+    padding-top: 80px;
+  }
 }
 
 .middle {
@@ -99,6 +133,11 @@ $header-left-p: 40px;
   justify-content: space-between;
   padding: 22px;
   padding-top: 40px;
+
+  @include _2560 {
+    padding-top: 40px;
+    padding: 30px;
+  }
 }
 
 .userStats {
@@ -112,4 +151,8 @@ $header-left-p: 40px;
 
 .playground {
   gap: 34px;
+}
+
+.wallet {
+  padding-left: 50px;
 }
