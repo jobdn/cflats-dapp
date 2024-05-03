@@ -28,7 +28,7 @@
     height: calc(100% - $header_height - $layout-row-gap);
   }
 
-  @include _2560 {
+  @include _2460 {
     border-radius: 40px;
     height: calc(100% - $header_height_2k - $layout-row-gap-2k);
   }

@@ -23,7 +23,7 @@
     padding: 0 28px;
   }
 
-  @include _2560 {
+  @include _2460 {
     gap: 92px;
   }
 }
@@ -49,7 +49,7 @@
     transform: translate(-22px, -50%);
   }
 
-  @include _2560 {
+  @include _2460 {
     width: 140px !important;
     height: 50px !important;
   }
@@ -70,7 +70,7 @@
     font-size: 22px;
   }
 
-  @include _2560 {
+  @include _2460 {
     font-size: 29px;
   }
 }

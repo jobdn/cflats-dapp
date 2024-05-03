@@ -23,7 +23,7 @@
       margin-bottom: 36px;
     }
   }
-  @include _2560 {
+  @include _2460 {
     margin-bottom: 60px;
   }
 }
@@ -34,7 +34,7 @@
   @include _1800 {
     width: 230px;
   }
-  @include _2560 {
+  @include _2460 {
     width: 300px;
     padding: 10px;
     font-size: 30px;
@@ -46,7 +46,7 @@
     margin-bottom: 14px;
   }
 
-  @include _2560 {
+  @include _2460 {
     margin-bottom: 19px;
   }
 }
@@ -61,7 +61,7 @@
     }
   }
 
-  @include _2560 {
+  @include _2460 {
     margin-top: 90px;
     margin-bottom: 23px;
   }

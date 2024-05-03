@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import classes from "./TabsPanelContent.module.scss";
-import { TokenCollection, ViewType } from "@/entities/Token";
+import { TokenCollection, ViewType, getSkeletonData } from "@/entities/Token";
 import { GenNumber, Token } from "@/shared/types";
 import { useAppSelector } from "@/shared/hooks/redux";
 import { selectStakedTokens, selectTokens } from "@/entities/Wallet";
@@ -29,11 +29,11 @@ export const TabsPanelContent = (props: TabsPanelContentProps) => {
       return (
         <TokenCollection
           tokens={items}
-          gen={gen}
           view={view}
           title={`Your NFT collection of GEN#${gen} / Staked`}
           className={classes.list}
           collectionClassName={classes.listContent}
+          placeholderItems={getSkeletonData("STAKED NFT", 50)}
         />
       );
     }
@@ -42,19 +42,20 @@ export const TabsPanelContent = (props: TabsPanelContentProps) => {
       <>
         <TokenCollection
           tokens={genTokens}
-          gen={gen}
           view={view}
           title={`Your NFT collection of GEN#${gen}`}
           subTitle="Each NFT can be staked to earn CFLAT token"
           className={classes.tokens}
+          placeholderItems={getSkeletonData(`NFT GET#${gen}`, 8)}
         />
+
         <TokenCollection
           tokens={stakedTokens}
-          gen={gen}
           view={view}
           title={`Staked NFT collection of GEN#${gen}`}
           subTitle="Each NFT can be claimed to return in wallet with CFLAT token"
           className={classes.stakedTokens}
+          placeholderItems={getSkeletonData("STAKED NFT", 8)}
         />
       </>
     );
