@@ -5,7 +5,7 @@ $min-aside_width: 357px;
 $max-aside_width: 384px;
 $middle_width: 950px;
 
-$aside_width_2k: 512px;
+$aside_width_2k: 496px;
 $middle_width_2k: 1300px;
 
 $layout-p: 36px;
@@ -16,7 +16,7 @@ $header-left-p: 40px;
   padding: 0 $layout-p $layout-p;
   overflow: hidden;
 
-  @include _2560 {
+  @include _2460 {
     padding: 0 $layout-p_2k $layout-p_2k;
   }
 }
@@ -32,7 +32,7 @@ $header-left-p: 40px;
 
   height: $header_height;
 
-  @include _2560 {
+  @include _2460 {
     max-width: 2560px;
     margin: 0 auto;
 
@@ -55,9 +55,9 @@ $header-left-p: 40px;
   grid-template-rows: minmax(0, 1fr);
   column-gap: 36px;
 
-  @include _2560 {
+  @include _2460 {
     grid-template-columns: $aside_width_2k minmax($middle_width_2k, 1fr) $aside_width_2k;
-    max-width: 2560px;
+    max-width: 2460px;
     margin: 0 auto;
     column-gap: 50px;
 
@@ -109,7 +109,7 @@ $header-left-p: 40px;
   grid-area: left;
   padding-top: 61px;
 
-  @include _2560 {
+  @include _2460 {
     padding-top: 80px;
   }
 }
@@ -134,7 +134,7 @@ $header-left-p: 40px;
   padding: 22px;
   padding-top: 40px;
 
-  @include _2560 {
+  @include _2460 {
     padding-top: 40px;
     padding: 30px;
   }

@@ -6,7 +6,7 @@ export interface Token {
   imgSrc: string;
   genNumber: number;
   name: string;
-  id: number;
+  id: string;
   //   isStaked?: boolean;
   //   lockPeriod?: number;
 }

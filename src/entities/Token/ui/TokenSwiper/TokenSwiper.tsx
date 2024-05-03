@@ -1,23 +1,19 @@
 "use client";
 
-import { GenNumber, Token } from "@/shared/types";
+import { Token } from "@/shared/types";
 
 import { Swiper } from "@/shared/ui/Swiper";
 import { TokenCard, TokenSkeletonCard } from "@/entities/Token";
+import { PlaceholderItem } from "../../types/PlaceholderItem";
 
 type TokenSwiperProps = {
   className?: string;
   tokens?: Token[];
+  placeholderItems: PlaceholderItem[];
 };
 
-const getSkeletonTokens = () =>
-  [...Array(8)].map((_, key) => ({
-    id: key,
-    footerText: `STAKED NFT`,
-  }));
-
 export const TokenSwiper = (props: TokenSwiperProps) => {
-  const { className, tokens } = props;
+  const { className, tokens, placeholderItems } = props;
 
   const swiperContent = tokens?.length ? (
     <Swiper
@@ -28,7 +24,7 @@ export const TokenSwiper = (props: TokenSwiperProps) => {
   ) : (
     <Swiper
       onSwipe={() => {}}
-      sliderItems={getSkeletonTokens()}
+      sliderItems={placeholderItems}
       SlideComponent={TokenSkeletonCard}
     />
   );

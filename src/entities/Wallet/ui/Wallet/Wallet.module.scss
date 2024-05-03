@@ -18,13 +18,13 @@
     font-weight: 600;
   }
 
-  @include _2560 {
+  @include _2460 {
     font-size: 24px;
   }
 }
 
 .icon {
-  @include _2560 {
+  @include _2460 {
     width: 70px;
     height: 70px;
   }

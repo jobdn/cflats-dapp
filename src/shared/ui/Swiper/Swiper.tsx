@@ -20,7 +20,7 @@ interface SwiperProps<T> {
   slideClassName?: string;
 }
 
-export const Swiper = <T extends { id: number }>(props: SwiperProps<T>) => {
+export const Swiper = <T extends { id: string }>(props: SwiperProps<T>) => {
   const { sliderItems, SlideComponent, className, slideClassName } = props;
   const handleSwipe = (swiper: SwiperType) => {
     props.onSwipe();
@@ -50,10 +50,6 @@ export const Swiper = <T extends { id: number }>(props: SwiperProps<T>) => {
 
         1800: {
           slidesPerView: 4,
-        },
-
-        2600: {
-          slidesPerView: 5,
         },
       }}
       slidesPerView={4}

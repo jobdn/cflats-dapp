@@ -4,3 +4,4 @@ export { TokenList } from "./ui/TokenList/TokenList";
 export { TokenSwiper } from "./ui/TokenSwiper/TokenSwiper";
 export { TokenCollection } from "./ui/TokenCollection/TokenCollection";
 export type { ViewType } from "./types/TokenCollectionView";
+export { getSkeletonData } from "./lib/getSkeletonData";

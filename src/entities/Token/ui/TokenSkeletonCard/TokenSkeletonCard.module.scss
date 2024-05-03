@@ -14,10 +14,12 @@
     height: 250px;
   }
 
-  @include _2560 {
+  @include _2460 {
     width: 266px;
     height: 346px;
-    padding: 13px 13px 0;
+    padding: 10px 10px 0;
+    border-width: 3px;
+    border-radius: 30px;
   }
 }
 
@@ -42,11 +44,13 @@
     height: 180px;
   }
 
-  @include _2560 {
+  @include _2460 {
     width: 240px;
     height: 240px;
     background-size: 210px 178px;
     background-position: center;
+    border-width: 3px;
+    border-radius: 30px;
   }
 
   cursor: pointer;
@@ -78,7 +82,7 @@
     padding: 20px;
   }
 
-  @include _2560 {
+  @include _2460 {
     font-size: 22px;
     padding: 35px;
   }

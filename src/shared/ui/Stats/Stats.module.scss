@@ -12,13 +12,13 @@
   // to prevent text jumping while collapse layout
   white-space: nowrap;
 
-  @include _2560 {
+  @include _2460 {
     margin-bottom: 20px;
   }
 }
 
 .statsIcon {
-  @include _2560 {
+  @include _2460 {
     width: 40px;
     height: 40px;
   }
@@ -28,7 +28,7 @@
   font-size: 17px;
   font-weight: 700;
 
-  @include _2560 {
+  @include _2460 {
     font-size: 22px;
   }
 }
@@ -84,7 +84,7 @@
   font-style: normal;
   line-height: normal;
 
-  @include _2560 {
+  @include _2460 {
     font-size: 22px;
   }
 }
